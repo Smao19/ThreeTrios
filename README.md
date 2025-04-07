@@ -2,10 +2,6 @@
 
 **Three Trios** is a fully configurable two-player strategy card game built in Java, showcasing modular architecture, combinable AI strategies, and a rich GUI experience. Developed as a deep dive into object-oriented design, the game offers customizable rulesets, deck configurations, and board layouts — GUI.
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)
-![OOP](https://img.shields.io/badge/OOP-Principles-informational)
-![MVC](https://img.shields.io/badge/Architecture-MVC-blue)
-
 ---
 
 ## 🎮 Features
