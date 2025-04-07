@@ -38,22 +38,50 @@ From the root directory or the `/dist` folder, run:
 java -jar ThreeTrios.jar [args...]
 ```
 
-### 🧭 Usage Parameters
+### ✨ Usage Parameters
 
-The main entry point is documented in `src/ThreeTrios.java`, which explains how to run various modes:
+The program accepts a flexible set of command-line arguments, allowing you to customize the gameplay experience. Note you can enter anything (e.g. "0" for the first 2 params if you want to use the default configs). Also if you choose to play a computer opponent (e.g. 3rd param is "C") you can list 1 or more strategies to be used by the opponent.
 
 ```bash
-# Start a standard two-player GUI game
-java -jar ThreeTrios.jar
-
-# Start a game with custom card and board configs
-java -jar ThreeTrios.jar path/to/cardConfig.txt path/to/boardConfig.txt
-
-# Start a game with a specific deck + board + optional strategy for AI
-java -jar ThreeTrios.jar resources/SmallDeckCardConfig.txt resources/basicBoardConfig.txt
+java -jar ThreeTrios.jar [board_config_path] [card_config_path] [player_color] [opponent_type] [opponent_strategies...]
 ```
 
-You can find various pre-built configuration files in `/resources/`.
+| Argument Position | Description |
+|-------------------|-------------|
+| `1` – `board_config` *(required)* | Path to a board layout `.txt` file. If the path is invalid, a default board config is used. |
+| `2` – `card_config` *(required)* | Path to a card deck config `.txt` file. If invalid, a default card config is used. |
+| `3` – `player_color` *(required)* | `"R"` for Red or `"B"` for Blue. |
+| `4` – `opponent_type` *(required)* | `"H"` for human or `"C"` for computer opponent. |
+| `5+` – `opponent_strategies` *(optional)* | List of integers representing AI strategies (**only applies if opponent is a computer**) |
+
+#### 🧠 Available AI Strategies:
+- `1`: **Corner Strategy** — favors corner moves
+- `2`: **Least Flippable Strategy** — minimizes flippable cards
+- `3`: **Max Cards Flip Strategy** — maximizes flipped cards
+
+> 🔍 Multiple strategies can be passed and will be combined during gameplay.
+
+---
+
+#### 🧪 Example Usages:
+
+```bash
+# Will error out: not enough arguments
+java -jar ThreeTrios.jar
+
+# Use board and card config (defaults used if paths are invalid)
+java -jar ThreeTrios.jar resources/basicBoardConfig.txt resources/SmallDeckCardConfig.txt
+
+# Play as Blue vs a computer using max-flip strategy
+java -jar ThreeTrios.jar resources/basicBoardConfig.txt resources/SmallDeckCardConfig.txt B C 3
+
+# Play as Red vs a computer using a combo of least-flippable and corner strategies
+java -jar ThreeTrios.jar resources/basicBoardConfig.txt resources/SmallDeckCardConfig.txt R C 2 1
+```
+
+👉 **Explore `/src/player/strategy/`** to see how each AI strategy works and interacts with various board and deck configurations.
+
+You can also find various pre-built configuration files in `/resources/`.
 
 ---
 
