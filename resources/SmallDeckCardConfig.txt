@@ -1,0 +1,11 @@
+uno 1 3 5 7
+dos 4 8 2 A
+tres 2 1 4 5
+cuatro A 3 8 9
+cinco 1 6 3 6
+seis 6 A 9 7
+seven 3 2 A A
+eight 7 3 9 2
+nine A 6 7 4
+ten 8 7 6 5
+elvn 9 9 9 9
