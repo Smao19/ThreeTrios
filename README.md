@@ -1,6 +1,6 @@
 # Three Trios – Java Strategy Card Game 🃏
 
-**Three Trios** is a fully configurable two-player strategy card game built in Java, showcasing modular architecture, combinable AI strategies, and a rich GUI experience. Developed as a deep dive into object-oriented design, the game offers customizable rulesets, deck configurations, and board layouts — playable via CLI or GUI.
+**Three Trios** is a fully configurable two-player strategy card game built in Java, showcasing modular architecture, combinable AI strategies, and a rich GUI experience. Developed as a deep dive into object-oriented design, the game offers customizable rulesets, deck configurations, and board layouts — GUI.
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)
 ![OOP](https://img.shields.io/badge/OOP-Principles-informational)
@@ -30,7 +30,7 @@
 
 1. Clone or download this repo
 2. Navigate to the `/dist` folder
-3. Use the pre-built `.jar` file, or compile from source
+3. Use the pre-built `.jar` file for easy access, or compile from source
 
 ---
 
@@ -57,7 +57,7 @@ java -jar ThreeTrios.jar path/to/cardConfig.txt path/to/boardConfig.txt
 java -jar ThreeTrios.jar resources/SmallDeckCardConfig.txt resources/basicBoardConfig.txt
 ```
 
-You can find various configuration files in `/resources/`.
+You can find various pre-built configuration files in `/resources/`.
 
 ---
 
@@ -85,7 +85,7 @@ This highlights:
 ## 🧠 Architecture Overview
 
 - **Model**: Core game logic and rules
-- **View**: Swing-based graphical interface
+- **View**: Graphical interface
 - **Controller**: Orchestrates game flow and interactions
 - **Design Patterns**: Implemented throughout to promote modularity and testability
 
@@ -106,17 +106,3 @@ This highlights:
 ├── dist/           # Executable JAR
 │   └── ThreeTrios.jar
 ```
-
----
-
-## 📜 License
-
-This project is for educational and demonstrative purposes. Feel free to fork or build upon it with attribution.
-
----
-
-## 🙋‍♂️ About the Author
-
-Developed by **Sebastian Arteaga** as a comprehensive demonstration of OOP, Java design patterns, and scalable system design.
-
-Connect: [LinkedIn](https://www.linkedin.com/in/sebastianarteaga)
